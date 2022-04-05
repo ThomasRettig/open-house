@@ -20,31 +20,23 @@
 				<p class="intro leading-loose color-white">Time</p>
 				<p class="date"><time>9am–12pm</time></p>
 			</section>
-			<section class="event-info">
-				<h2>Join us live!</h2>
-				<p class="intro leading-loose color-white">Date</p>
-				<p class="date"><time>14 May 2022</time> (Sunday)</p>
-				<p class="intro leading-loose color-white">Time</p>
-				<p class="date"><time>9am–12pm</time></p>
-			</section>
 			<section class="directory">
 				<h1>Directory</h1>
 				<div class="grid">
 					<ul>
 						<div><li><img src="https://catholichigh.moe.edu.sg/wp-content/uploads/2017/11/CHS-Clock-Tower.jpg"><a href="https://catholichigh.moe.edu.sg/chs-experience/">The CHS Experience</a></li></div>
-						<div><li><img src="https://catholichigh.moe.edu.sg/wp-content/uploads/2017/11/CHS-Library.jpg"><a href="https://catholichigh.moe.edu.sg/chs-academic-info/">Academic Info</a></li></div>
+						<div><li><img src="https://catholichigh.moe.edu.sg/wp-content/uploads/2021/10/iCCG-3.jpg"><a href="https://catholichigh.moe.edu.sg/chs-student-life/">Student Life</a><small>Watch our gentlemen in action!</small></li></div>
+						<div><li><img src="https://catholichigh.moe.edu.sg/wp-content/uploads/2017/11/CHS-Library.jpg"><a href="https://catholichigh.moe.edu.sg/chs-academic-info/">Academic Info</a><small>Hear our the Head of Departments share about our CHS programmes</small></li></div>
 						<div><li><img src="https://uuanj.com/wp-content/uploads/2020/05/post1.jpg"><a href="https://catholichigh.moe.edu.sg/frequently-asked-questions/">FAQ</a></li></div>
-						<div><li><img src="https://catholichigh.moe.edu.sg/wp-content/uploads/2017/11/CHS-Plaza-01.jpg"><a href="https://catholichigh.moe.edu.sg/chs-experience/">The CHS Experience</a></li></div>
-						<div><li><img src="https://catholichigh.moe.edu.sg/wp-content/uploads/2021/10/iCCG-3.jpg"><a href="https://catholichigh.moe.edu.sg/chs-student-life/">Student Life</a></li></div>
-						<div><li><a href="https://catholichigh.moe.edu.sg/chs-academic-info/">Academic Info</a></li></div>
-						<div><li><a href="https://catholichigh.moe.edu.sg/frequently-asked-questions/">FAQ</a></li></div>
-						<div><li><a href="https://catholichigh.moe.edu.sg/chs-student-life/">Student Life</a></li></div>
+						<div><li><img src="https://catholichigh.moe.edu.sg/wp-content/uploads/2017/11/CHS-Sculptures.jpg"><a href="https://catholichigh.moe.edu.sg/prospectuses/">Prospectus</a></li></div>
+						<div><li><img src="https://catholichigh.moe.edu.sg/wp-content/uploads/2012/04/Catholic-High-Campus-07c-Fr-Becheras-700px.jpg"><a href="https://catholichigh.moe.edu.sg/conducive-home/pictorial-tour-of-chs/">Campus Tour</a><small>Discover our sprawling compound in the heart of Bishan</small></li></div>
 					</ul>
 				</div>
 			</section>
 		</main>
 	</body>
 	<style>
+		@import "https:/rsms.me/inter/inter.css";
 		@import "https:/rsms.me/inter/inter-display.css";
 
 		@font-face {
@@ -55,6 +47,7 @@
 		:root {
 			--base-font: "Nan Holo";
 			--display-font: "Inter Display";
+			--small-font: "Inter";
 		}
 
 		html {
@@ -107,13 +100,36 @@
 		h2 {
 			font-family: var(--display-font);
 			font-size: clamp(40px, 10vw, 72px);
-			line-height: clamp(45px, 10vw, 75px);
+			line-height: 115%;
+			max-width: 700px;
+			margin-bottom: 30px;
+			text-align: center;
 		}
 
 		li {
 			list-style-type: none;
 			font-size: clamp(25px, 10vw, 35px);
 			line-height: clamp(30px, 10vw, 40px);
+		}
+
+		small {
+			opacity: 0.5;
+			font-size: 18px;
+			font-weight: 500;
+			font-family: var(--small-font);
+			display: block;
+			max-width: 350px;
+			line-height: 135%;
+		}
+
+		@media screen and (min-width: 900px) {
+			a::after {
+				content: "→";
+				font: inherit;
+				opacity: 0.2;
+				position: relative;
+				left: calc(0.5vw + 1px);
+			}
 		}
 
 		img {
