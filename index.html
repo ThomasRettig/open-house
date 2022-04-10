@@ -22,15 +22,18 @@
 				<h1>Directory</h1>
 				<div class="grid">
 					<ul>
-						<div><li><img src="https://catholichigh.moe.edu.sg/wp-content/uploads/2017/11/CHS-Clock-Tower.jpg"><a href="https://catholichigh.moe.edu.sg/chs-experience/">The CHS Experience</a><small>Hear our school leaders, students, parents, and alumni share about the school.</small></li></div>
-						<div><li><img src="https://catholichigh.moe.edu.sg/wp-content/uploads/2021/10/iCCG-3.jpg"><a href="https://catholichigh.moe.edu.sg/chs-student-life/">Student Life</a><small>Watch our gentlemen in action!</small></li></div>
-						<div><li><img src="https://catholichigh.moe.edu.sg/wp-content/uploads/2017/11/CHS-Library.jpg"><a href="https://catholichigh.moe.edu.sg/chs-academic-info/">Academic Info</a><small>Hear our the Head of Departments share about our CHS programmes</small></li></div>
-						<div><li><img src="https://uuanj.com/wp-content/uploads/2020/05/post1.jpg"><a href="https://catholichigh.moe.edu.sg/frequently-asked-questions/">Frequently Asked Questions</a><small>We answer common questions asked by parents and students</small></li></div>
-						<div><li><img src="https://catholichigh.moe.edu.sg/wp-content/uploads/2017/11/CHS-Sculptures.jpg"><a href="https://catholichigh.moe.edu.sg/prospectuses/">Prospectus</a><small>Download our annual Prospectus to get a full view of CHS</small></li></div>
-						<div><li><img src="https://catholichigh.moe.edu.sg/wp-content/uploads/2012/04/Catholic-High-Campus-07c-Fr-Becheras-700px.jpg"><a href="https://catholichigh.moe.edu.sg/conducive-home/pictorial-tour-of-chs/">Campus Tour</a><small>Discover our sprawling compound in the heart of Bishan</small></li></div>
+						<div><li><img src="https://catholichigh.moe.edu.sg/wp-content/uploads/2017/11/CHS-Clock-Tower.jpg" alt="CHS Clock Tower"><a href="https://catholichigh.moe.edu.sg/chs-experience/">The CHS Experience</a><small>Hear our school leaders, students, parents, and alumni share about the school.</small></li></div>
+						<div><li><img src="https://catholichigh.moe.edu.sg/wp-content/uploads/2021/10/iCCG-3.jpg" alt="CHS stuents walking down a corridor"><a href="https://catholichigh.moe.edu.sg/chs-student-life/">Student Life</a><small>Watch our gentlemen in action!</small></li></div>
+						<div><li><img src="https://catholichigh.moe.edu.sg/wp-content/uploads/2017/11/CHS-Library.jpg" alt="CHS students studying in the library"><a href="https://catholichigh.moe.edu.sg/chs-academic-info/">Academic Info</a><small>Hear our the Head of Departments share about our CHS programmes</small></li></div>
+						<div><li><img src="https://uuanj.com/wp-content/uploads/2020/05/post1.jpg" alt="Illustration of a hand tapping on a question mark"><a href="https://catholichigh.moe.edu.sg/frequently-asked-questions/">Frequently Asked Questions</a><small>We answer common questions asked by parents and students</small></li></div>
+						<div><li><img src="https://catholichigh.moe.edu.sg/wp-content/uploads/2017/11/CHS-Sculptures.jpg" alt="CHS statue"><a href="https://catholichigh.moe.edu.sg/prospectuses/">Prospectus</a><small>Download our annual Prospectus to get a full view of CHS</small></li></div>
+						<div><li><img src="https://catholichigh.moe.edu.sg/wp-content/uploads/2012/04/Catholic-High-Campus-07c-Fr-Becheras-700px.jpg" alt="CHS statue"><a href="https://catholichigh.moe.edu.sg/conducive-home/pictorial-tour-of-chs">Campus Tour</a><small>Discover our sprawling compound in the heart of Bishan</small></li></div>
 					</ul>
 				</div>
 			</section>
+			<aside>
+				<a href="https://catholichigh.moe.edu.sg/openhouse/" class="floating-button">Homepage</a>
+			</aside>
 		</main>
 	</body>
 	<style>
@@ -71,10 +74,10 @@
 			color: inherit;
 			display: block;
 			margin-top: 20px;
-			transition: 0.2s ease;
+			transition: 0.15s ease;
 		}
 
-		a:hover {
+		a:not(.floating-button):hover {
 			opacity: 0.65;
 		}
 
@@ -121,7 +124,7 @@
 		}
 
 		@media screen and (min-width: 900px) {
-			a::after {
+			a:not(.floating-button)::after {
 				content: "→";
 				font: inherit;
 				opacity: 0.2;
@@ -200,6 +203,27 @@
 			grid-row-gap: 1.5rem;
 			margin-bottom: 8vh;
 			padding: 5vw;
+		}
+
+		@media screen and (max-width: 700px) {
+			ul {
+				display: revert;
+			}
+
+			li {
+				margin-bottom: 20px;
+			}
+		}
+
+		.floating-button {
+			position: fixed;
+			bottom: 10px;
+			right: 10px;
+			background: hsl(0deg 0% 100% / 75%);
+			backdrop-filter: blur(5px) saturate(3);
+			color: black;
+			padding: 6px;
+			border-radius: 6px;
 		}
 	</style>
 </html>
