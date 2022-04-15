@@ -11,7 +11,7 @@
 			<h1>Infinite Possibilities <span class="opacity-50">@</span> Catholic High School</h1>
 		</header>
 		<main>
-			<section class="event-info">
+			<section class="event-info flex-center">
 				<h2>Programme of the day</h2>
 				<!-- <p class="intro leading-loose color-white">Date</p>
 				<p class="date"><time>14 May 2022</time> (Sunday)</p>
@@ -19,7 +19,17 @@
 				<p class="date"><time>9am–12pm</time></p> -->
 				<p>Image goes here</p>
 			</section>
-			<section class="directory">
+			<div class="flex-center">
+				<div class="grid-wrapper">
+					<section>
+						<h3>What's happening?</h3>
+					</section>
+					<section>
+						<h3>Forms for the day</h3>
+					</section>
+				</div>
+			</div>
+			<!-- <section class="directory">
 				<h1>Directory</h1>
 				<div class="grid">
 					<ul>
@@ -31,7 +41,7 @@
 						<div><li><img src="https://catholichigh.moe.edu.sg/wp-content/uploads/2012/04/Catholic-High-Campus-07c-Fr-Becheras-700px.jpg" alt="CHS statue"><a href="https://catholichigh.moe.edu.sg/conducive-home/pictorial-tour-of-chs">Campus Tour</a><small>Discover our sprawling compound in the heart of Bishan</small></li></div>
 					</ul>
 				</div>
-			</section>
+			</section> -->
 			<aside>
 				<a href="https://catholichigh.moe.edu.sg/openhouse/" class="floating-button">Homepage</a>
 			</aside>
@@ -50,10 +60,18 @@
 			font-display: swap;
 		}
 
+		* {
+			box-sizing: border-box;
+		}
+
 		:root {
 			--base-font: "Nan Holo";
 			--display-font: "InterDisplay";
 			--small-font: "Inter";
+		}
+
+		html {
+			overflow-x: hidden;
 		}
 
 		body {
@@ -94,8 +112,11 @@
 			margin: 0;
 		}
 
-		h1 {
+		h1, h2, h3 {
 			font-family: var(--display-font), "Inter";
+		}
+
+		h1 {
 			letter-spacing: -1px;
 			font-size: clamp(40px, 10vw, 72px);
 			line-height: clamp(45px, 10vw, 75px);
@@ -108,12 +129,16 @@
 		}
 
 		h2 {
-			font-family: var(--display-font), "Inter";
 			font-size: clamp(40px, 10vw, 72px);
 			line-height: 115%;
 			max-width: 800px;
 			margin-bottom: 30px;
 			text-align: center;
+		}
+
+		h3 {
+			font-size: clamp(25px, 10vw, 30px);
+			line-height: 115%;
 		}
 
 		li {
@@ -146,7 +171,9 @@
 		}
 
 		footer {
+			padding-top: 80px;
 			padding-left: 30px;
+			padding-bottom: 40px;
 		}
 
 		img {
@@ -157,14 +184,9 @@
 
 		.event-info {
 			background-color: hsl(126, 46%, 37%);
-			width: 100%;
+			width: 100vw;
 			padding: 5vw 0;
 			margin-bottom: 50px;
-			height: fit-content;
-			display: flex;
-			flex-direction: column;
-			align-items: center;
-			justify-content: center;
 		}
 
 		:where(.event-info > *) {
@@ -210,6 +232,14 @@
 			justify-content: center;
 		}
 
+		.flex-center {
+			height: fit-content;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+		}
+
 		ul {
 			width: calc(75% - 10px);
 			font-family: var(--base-font);
@@ -229,6 +259,12 @@
 			li {
 				margin-bottom: 20px;
 			}
+		}
+
+		.grid-wrapper {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			gap: 1em;
 		}
 
 		.floating-button {
