@@ -25,8 +25,8 @@
 						<section>
 							<h3>Getting here</h3>
 								<div style="display: flex; gap: 1em;">
-									<img style="height: 100%;max-width:65%;" src="https://res.cloudinary.com/thms-rttg/image/upload/q_95/v1650285838/dropoff-map_p9ub8e.webp">
-									<img style="height: 100%;max-width:35%;" src="https://res.cloudinary.com/thms-rttg/image/upload/q_100/v1650285505/school-dropoff-point_ttvtcj.webp">
+									<img class="left" src="https://res.cloudinary.com/thms-rttg/image/upload/q_95/v1650285838/dropoff-map_p9ub8e.webp">
+									<img class="right" src="https://res.cloudinary.com/thms-rttg/image/upload/q_100/v1650285505/school-dropoff-point_ttvtcj.webp">
 								</div>
 						</section>
 					</div>
@@ -66,6 +66,26 @@
 	<style>
 		@import url("https://rsms.me/inter/inter.css");
 		@import url("https://rsms.me/inter/inter-display.css");
+
+		.left {
+			height: 100%;
+			max-width: 65%;
+		}
+
+		.right {
+			height: 100%;
+			max-width: 35%;
+		}
+
+		@media screen and (max-width: 900px) {
+			.left {
+				max-width: 60%;
+			}
+
+			.right {
+				max-width: 30%;
+			}
+		}
 
 		* {
 			box-sizing: border-box;
